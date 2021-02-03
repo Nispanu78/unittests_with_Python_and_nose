@@ -1,9 +1,8 @@
 import sys
 err = sys.stderr
-import nose
+import nose2
 import re
-from nose.plugins import Plugin
-
+from nose2.events import Plugin
 
 class RegexPicker(Plugin):
     name = "regexpicker"
@@ -40,8 +39,8 @@ if __name__ == "__main__":
     "-- verbosity=2"]
     print ("With verbosity...")
     print ("====================")
-    nose.run(argv=args, plugins=[RegexPicker()])
+    nose2.run(argv=args, plugins=[RegexPicker()])
     print ("Without verbosity...")
     print ("====================")
     args = args[:-1]
-    nose.run(argv=args, plugins=[RegexPicker()])
+    nose2.run(argv=args, plugins=[RegexPicker()])
