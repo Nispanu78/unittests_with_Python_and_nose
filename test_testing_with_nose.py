@@ -1,4 +1,3 @@
-
 class ShoppingCart(object):
 
     def __init__(self):
@@ -42,5 +41,4 @@ class ShoppingCartTest(unittest.TestCase):
         self.assertEquals(15.00, self.cart.price(1))
 
     def test_total_with_sales_tax(self):
-        self.assertAlmostEquals(16.39,
-                            self.cart.total(9.25), 2)
+        self.assertAlmostEquals(16.39, self.cart.total(9.25), 2)
